@@ -1,6 +1,6 @@
 
 /*
- * what		: papercraft | origami
+ * what		: origami
  * when		: 16 Juni 2015 - 02 December 2015
  * where	: in your sincere heart
  * who		: yusuf rizky virandi @ .virandi. studio
@@ -27,9 +27,9 @@ package
 	import com.virandi.base.CMain;
 	import com.virandi.base.IHandleEvent;
 	import com.virandi.base.IState;
-	import com.virandi.papercraft.core.Level;
-	import com.virandi.papercraft.render.Paper2D;
-	import com.virandi.papercraft.state.StatePlay;
+	import com.virandi.origami.core.Level;
+	import com.virandi.origami.render.Paper2D;
+	import com.virandi.origami.state.StatePlay;
 	
 	public class Main extends CMain
 	{
