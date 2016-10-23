@@ -1,0 +1,47 @@
+
+package com.virandi.base
+{
+	import com.adobe.nativeExtensions.Vibration;
+	
+	public class CVibration
+	{
+		////////////////////////////////////////////////////////////////////////////////////////////////////
+		
+		static public var instance:CVibration = null;
+		
+		static public function get Instance () : CVibration
+		{
+			return (CVibration.instance = ((CVibration.instance == null) ? new CVibration () : CVibration.instance));
+		}
+		
+		////////////////////////////////////////////////////////////////////////////////////////////////////
+		
+		public var vibration:Vibration = null;
+		
+		////////////////////////////////////////////////////////////////////////////////////////////////////
+		
+		public function CVibration ()
+		{
+			super ();
+			
+			if (Vibration.isSupported == false)
+			{
+			}
+			else
+			{
+				this.vibration = new Vibration ()
+			}
+		}
+		
+		////////////////////////////////////////////////////////////////////////////////////////////////////
+		
+		public function Vibrate (duration:Number) : CVibration
+		{
+			this.vibration.vibrate (duration);
+			
+			return this;
+		}
+		
+		////////////////////////////////////////////////////////////////////////////////////////////////////
+	}
+}
